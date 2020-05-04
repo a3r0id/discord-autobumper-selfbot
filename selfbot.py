@@ -5,6 +5,9 @@ from datetime import datetime
 # Your user-token goes in 'tokens.txt'.
 TOKEN = open("token.txt").read()
 
+# You can set your current Rich Presence below: 
+presence = "Netflix"
+
 from random import choice
 chars = ['a','b','c','d','e','f','1','2','3','4','5','6','7','8','9','0']
 random_remarks = ["Ayoo!", "Whats poppin?!", "Hey all you cool cats and kittens!", "Oye Matey!"]
@@ -28,7 +31,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('-\n[Ok] - Succesfully logged in as {0.user} Via Discord Official API!'.format(client))
-    activity = discord.Activity(name='Netflix', type=discord.ActivityType.watching)
+    activity = discord.Activity(name=presence, type=discord.ActivityType.watching)
     await client.change_presence(activity=activity)
     glbls.timestart = datetime.now()
     
