@@ -48,11 +48,15 @@ async def on_message(message):
 + Hey I'm here to bump your server!
 - I'm not a self bot or anything!
 
+Help Command: --help
+
 Start Session: --bump
 
 End Session: --stop SESSION_ID
 
 Test Responsiveness: --test
+
+Uptime: --uptime
 ```
 """
             )
