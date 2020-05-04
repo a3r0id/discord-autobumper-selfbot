@@ -4,3 +4,7 @@
 ### Start session with "--bump", that session will be assigned a key, with which you can stop the session with.
 
 ### Bug: When user starts a session then proceeds to stop correctly, the aknowledgemnt message won't send until the bump timer is up, will fix soon.
+
+### Setup: If you can't setup a simple Python bot then you should'nt be self-botting... 
+
+### Enjoy!
