@@ -1,6 +1,7 @@
 import discord
 import asyncio
 from datetime import datetime
+from random import choice
 
 # Your user-token goes in 'tokens.txt'.
 TOKEN = open("token.txt").read()
@@ -8,7 +9,6 @@ TOKEN = open("token.txt").read()
 # You can set your current Rich Presence below: 
 presence = "Netflix"
 
-from random import choice
 chars = ['a','b','c','d','e','f','1','2','3','4','5','6','7','8','9','0']
 random_remarks = ["Ayoo!", "Whats poppin?!", "Hey all you cool cats and kittens!", "Oye Matey!"]
 class hashes:
@@ -35,8 +35,6 @@ async def on_ready():
     await client.change_presence(activity=activity)
     glbls.timestart = datetime.now()
     
-   
-
 @client.event 
 async def on_message(message):
     m = message
@@ -70,7 +68,7 @@ Uptime: --uptime
     if c.startswith("--bump"):
         
         nonce = str(hashes.uword())
-        
+  
         m = await ch.send("!d bump")
         await asyncio.sleep(5)
         await m.edit(content=f"Hey {a}! Use `--stop {nonce}` to stop the session. Sleeping for `{str(glbls.timing)} Seconds`!")
@@ -108,5 +106,4 @@ Uptime: --uptime
     if c.startswith(f"--uptime"):
         await ch.send(f"I have been active for {uptime()}!")
         
-
 client.run(TOKEN, bot=False)    
