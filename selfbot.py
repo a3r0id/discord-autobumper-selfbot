@@ -105,5 +105,8 @@ Uptime: --uptime
                 
     if c.startswith(f"--uptime"):
         await ch.send(f"I have been active for {uptime()}!")
+    
+    if c.startswith(f"--link"):
+        await ch.send("**Get my script here: **\n```css\n[https://github.com/aerobotpro/discord-autobumper-selfbot]\n```\n**BE SURE TO STAR THE GITHUB AND FOLLOW!\n**")
         
 client.run(TOKEN, bot=False)    
