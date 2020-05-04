@@ -2,7 +2,7 @@ import discord
 import asyncio
 from datetime import datetime
 
-TOKEN = open("token.txt")
+TOKEN = open("token.txt").read()
 
 #Crypto
 from random import choice
