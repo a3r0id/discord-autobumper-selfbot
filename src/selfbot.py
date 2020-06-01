@@ -34,7 +34,7 @@ async def on_message(message):
         await ch.send(
 """
 ```diff
-+ Protero Self-Bot
++ A Self-Bot
 - By Aero :)
 
 -[HELP]
